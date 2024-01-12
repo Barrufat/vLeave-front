@@ -1,7 +1,10 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import { itemsReducer } from "./fetaures/items/itemsSlice";
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    items: itemsReducer,
+  },
 });
 
 export type AppDispatch = typeof store.dispatch;

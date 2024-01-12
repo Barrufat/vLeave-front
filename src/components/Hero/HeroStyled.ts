@@ -27,10 +27,6 @@ const HeroStyled = styled.section`
       &__image {
         width: 50%;
       }
-
-      &__content-wrapper {
-        margin-right: 30px;
-      }
     }
   }
 `;
