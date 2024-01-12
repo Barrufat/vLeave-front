@@ -1,5 +1,7 @@
+import ItemsList from "../../components/ItemsList/ItemsList";
+
 const ShopPage = () => {
-  return <h1 className="page__main-title">Shop</h1>;
+  return <ItemsList />;
 };
 
 export default ShopPage;
