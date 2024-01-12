@@ -5,6 +5,13 @@ const ItemStyled = styled.article`
   flex-direction: column;
   align-items: center;
   gap: 10px;
+
+  .item {
+    &__title {
+      font-size: ${({ theme }) => theme.typography.contentSize};
+      font-weight: ${({ theme }) => theme.typography.contentWeight};
+    }
+  }
 `;
 
 export default ItemStyled;

@@ -9,7 +9,7 @@ const Item = ({ Item: { name, mainImage } }: ItemProps) => {
   return (
     <ItemStyled>
       <img src={`./${mainImage}`} alt={name} width="100%" height="auto" />
-      <span>{name}</span>
+      <h2 className="item__title">{name}</h2>
     </ItemStyled>
   );
 };
