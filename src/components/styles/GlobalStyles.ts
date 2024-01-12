@@ -41,12 +41,13 @@ a {
 }
 
 button {
-  padding: 5px 10px;
+  padding: 5px 20px;
   background: none;
-  border: none;
+  border: solid 1px ${({ theme }) => theme.colors.primary};
   cursor:pointer;
   font-size:inherit;
-  border-radius: 5px;
+  font-family:inherit;
+  border-radius: 20px;
   margin: 10px 0;
 }
 
@@ -77,11 +78,24 @@ textarea {
   outline: 0px none transparent;
 }
 
-.section{
-  &__action{
-    background-color: #2f2f2f;
-    color: #fff;
+.page{
+  &__main-title{
+    font-family: ${({ theme }) => theme.typography.mainFontFamily};
+    font-size: ${({ theme }) => theme.typography.mainSize};
   }
+
+  &__action{
+    color: ${({ theme }) => theme.colors.contentColor};
+
+    &:hover{
+      color: #fff;
+      background-color: ${({ theme }) => theme.colors.contentColor};
+    }
+  }
+}
+
+.section{
+  padding:0 20px;
 }
 `;
 

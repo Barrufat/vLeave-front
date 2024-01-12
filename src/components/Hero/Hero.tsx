@@ -2,12 +2,12 @@ import HeroStyled from "./HeroStyled";
 
 const Hero = () => {
   return (
-    <HeroStyled>
+    <HeroStyled className="section">
       <img
         className="hero__image"
         src="./hero1.png"
         alt="campervan-on-the-road"
-        width="50%"
+        width="100%"
         height="auto"
       />
       <div className="hero__content-wrapper">
@@ -16,7 +16,7 @@ const Hero = () => {
           to design your camper-van indoors, compare distributions, prices and
           finally buy the moving-house of your dreams!
         </span>
-        <button className="section__action">Action</button>
+        <button className="page__action">Action</button>
       </div>
     </HeroStyled>
   );

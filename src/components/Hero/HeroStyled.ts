@@ -24,6 +24,10 @@ const HeroStyled = styled.section`
     justify-content: center;
 
     .hero {
+      &__image {
+        width: 50%;
+      }
+
       &__content-wrapper {
         margin-right: 30px;
       }
