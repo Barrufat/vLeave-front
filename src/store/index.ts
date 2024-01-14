@@ -3,7 +3,7 @@ import { itemsReducer } from "./fetaures/items/itemsSlice";
 
 export const store = configureStore({
   reducer: {
-    items: itemsReducer,
+    itemsState: itemsReducer,
   },
 });
 
