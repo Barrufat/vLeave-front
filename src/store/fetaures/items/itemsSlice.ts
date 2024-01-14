@@ -1,6 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { ItemStructure } from "./types";
-import { itemsData } from "../../../data/data";
 
 export interface ItemsStateStructure {
   items: ItemStructure[];
@@ -8,7 +7,7 @@ export interface ItemsStateStructure {
 }
 
 const itemsInitialState: ItemsStateStructure = {
-  items: itemsData,
+  items: [],
   currentItem: {
     _id: "",
     collection: "",
@@ -27,7 +26,17 @@ const itemsInitialState: ItemsStateStructure = {
 const itemsSlice = createSlice({
   name: "items",
   initialState: itemsInitialState,
-  reducers: {},
+  reducers: {
+    loadItems: (
+      currentState: ItemsStateStructure,
+      action: PayloadAction<ItemStructure[]>,
+    ): ItemsStateStructure => ({
+      ...currentState,
+      items: action.payload,
+    }),
+  },
 });
+
+export const { loadItems: loadItemsActionCreator } = itemsSlice.actions;
 
 export const itemsReducer = itemsSlice.reducer;

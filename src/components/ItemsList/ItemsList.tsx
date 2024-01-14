@@ -3,7 +3,7 @@ import Item from "../Item/Item";
 import ItemsListStyled from "./ItemsListStyled";
 
 const ItemsList = () => {
-  const items = useAppSelector((state) => state.items.items);
+  const items = useAppSelector((state) => state.itemsState.items);
 
   return (
     <ItemsListStyled>
