@@ -8,7 +8,7 @@ interface ItemProps {
 const Item = ({ Item: { name, mainImage } }: ItemProps) => {
   return (
     <ItemStyled>
-      <img src={`./${mainImage}`} alt={name} width="100%" height="auto" />
+      <img src={`./${mainImage}.png`} alt={name} width="100%" height="auto" />
       <h2 className="item__title">{name}</h2>
     </ItemStyled>
   );
